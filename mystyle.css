@@ -1,6 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:wght@900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
+.head-neon {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+}
+.text-neon {
+    text-transform: uppercase;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: .3s linear;
+    color: transparent;
+    -webkit-text-stroke: 2px red;
+    background-image: linear-gradient(to left, red, rgb(226, 33, 33), black, rgb(35, 31, 31));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    animation: move 20s linear infinite;
+}
+@keyframes move {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+.text-neon:hover {
+    color: red;
+    text-shadow: 0 0 10px rgba(255, 0, 0, .5),
+                 0 0 20px rgba(255, 0, 0, .5),
+                 0 0 40px rgba(255, 0, 0, .5),
+                 0 0 80px rgba(255, 0, 0, .5),
+                 0 0 160px rgba(255, 0, 0, .5),
+                 0 0 320px rgba(255, 0, 0, .5);
+}
