@@ -12,13 +12,12 @@
     width: 100vw;
     height: 10vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     background-color: rgb(20, 20, 20);
 }
 .text-neon {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: .3s linear;
     color: transparent;
@@ -27,6 +26,9 @@
     background-size: 200%;
     -webkit-background-clip: text;
     animation: move 20s linear infinite;
+    display: flex;
+    align-items: center;
+    padding-left: 40vw;
 }
 @keyframes move {
     100% {
@@ -34,48 +36,62 @@
     }
 }
 .text-neon:hover {
-    
+    text-shadow: 0 0 10px rgba(255, 0, 0, .5),
+                 0 0 20px rgba(255, 0, 0, .5),
+                 0 0 40px rgba(255, 0, 0, .5),
+                 0 0 80px rgba(255, 0, 0, .5),
+                 0 0 160px rgba(255, 0, 0, .5),
+                 0 0 320px rgba(255, 0, 0, .5); 
 }
 
 .menu-neon {
-    width: 200px;
-    height: 90vh;
+    width: 0px;
+    height: 100vh;
     padding: 40px 0 40px;
     background-color: rgb(20, 20, 20);
-    box-shadow: 3px 0 10px red;
-   }
-   
-   .bttn-hamburguer {
-       position: absolute;
-       top: 1%;
-       width: 100%;
-       padding-left: 10px;
-   }
-   .bttn-hamburguer i {
-       color: red;
-       cursor: pointer;
-       font-size: 50px;
-   }
-   
-   ul {
-       list-style: none;
-   }
-   ul li.item-menu {
-       transition: 1s;
-   }
-   ul li.item-menu a{
-       color: white;
-       text-decoration: none;
-       font-size: 20px;
-       padding: 20px 7%;
-       display: flex;
-       justify-content: space-between;
-       line-height: 50px;
-   }
-   ul li.item-menu a .icon > i {
-       font-size: 50px;
-   }
-   ul li.item-menu:hover {
+    box-shadow: 5px 0 10px red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+.menu-neon:hover{
+    width: 200px;
+}
+.bttn-hamburguer {
+    width: 100%;
+    padding-left: 10px;
+    position: fixed;
+    top: 0;
+}
+.bttn-hamburguer i {
+    color: red;
+    cursor: pointer;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+}
+
+ul {
+    list-style: none;
+}
+ul li.item-menu {
+    transition: 1s;
+}
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+}
+ul li.item-menu a .icon > i {
+    font-size: 30px;
+}
+ul li.item-menu:hover {
     text-shadow: 0 0 10px rgba(255, 0, 0, .5),
                  0 0 20px rgba(255, 0, 0, .5),
                  0 0 40px rgba(255, 0, 0, .5),
